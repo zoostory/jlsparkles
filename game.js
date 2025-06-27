@@ -27,8 +27,8 @@ class StartScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('start_bg', 'title_screen_1.png');
-        this.load.audio('bg_music', 'bg_music_level1.mp3');
+        this.load.image('start_bg', 'assets/images/title_screen_1.png');
+        this.load.audio('bg_music', 'assets/audio/bg_music_level1.mp3');
     }
 
     create() {
@@ -53,11 +53,11 @@ class Level1 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg1', 'bg.png');
-        this.load.image('sparkle', 'sparkle.png');
-        this.load.spritesheet('jl', 'jl_sprite_fixed.png', { frameWidth: 32, frameHeight: 32 });
-        this.load.audio('jump', 'jump.wav');
-        this.load.audio('sparkle_collect', 'sparkle_collect.wav');
+        this.load.image('bg1', 'assets/images/bg.png');
+        this.load.image('sparkle', 'assets/images/sparkle.png');
+        this.load.spritesheet('jl', 'assets/images/jl_sprite_fixed.png', { frameWidth: 32, frameHeight: 32 });
+        this.load.audio('jump', 'assets/audio/jump.wav');
+        this.load.audio('sparkle_collect', 'assets/audio/sparkle_collect.wav');
     }
 
     create() {
@@ -109,13 +109,12 @@ class Level1 extends Phaser.Scene {
     }
 }
 
-// Placeholder scenes for Level2 and Finale
 class Level2 extends Phaser.Scene {
     constructor() {
         super({ key: 'Level2' });
     }
 
-    preload() { this.load.image('bg2', 'bg.png'); }
+    preload() { this.load.image('bg2', 'assets/images/bg.png'); }
     create() {
         this.add.image(400, 300, 'bg2').setDisplaySize(800, 600);
         this.add.text(300, 280, 'Level 2 Coming Soon!', { fontSize: '32px', fill: '#fff' });
@@ -128,7 +127,7 @@ class Finale extends Phaser.Scene {
         super({ key: 'Finale' });
     }
 
-    preload() { this.load.image('bg3', 'bg.png'); }
+    preload() { this.load.image('bg3', 'assets/images/bg.png'); }
     create() {
         this.add.image(400, 300, 'bg3').setDisplaySize(800, 600);
         this.add.text(250, 280, '🎆 Fireworks Finale! 🎆', { fontSize: '32px', fill: '#fff' });
